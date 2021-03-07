@@ -1,12 +1,10 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import UserListScreen from "./src/screens/userListScreen";
-import UserDetailScreen from "./src/screens/userDetailScreen";
 
 const navigator = createStackNavigator(
   {
     UserList: UserListScreen,
-    UserDetail: UserDetailScreen,
   },
   {
     initialRouteName: "UserList",
@@ -22,5 +20,3 @@ const navigator = createStackNavigator(
 );
 
 export default createAppContainer(navigator);
-
-//<StatusBar backgroundColor='blue' barStyle='light-content' />
