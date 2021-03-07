@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { StyleSheet, FlatList } from "react-native";
-import UserView from "../components/userView";
-import usersData from "../hooks/usersData";
+import UserView from "../../components/UserView/userView";
+import usersData from "../../hooks/usersData";
+import { styles } from "./styles";
 
 const UserListScreen = (props) => {
   const [fetchUsers, users, errorMessage] = usersData();
@@ -21,13 +22,5 @@ const UserListScreen = (props) => {
     />
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#F9F8FF",
-    flexDirection: "column",
-    marginTop: 15,
-  },
-});
 
 export default UserListScreen;

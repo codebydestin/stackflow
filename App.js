@@ -1,6 +1,6 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
-import UserListScreen from "./src/screens/userListScreen";
+import UserListScreen from "./src/screens/UserListScreen/userListScreen";
 
 const navigator = createStackNavigator(
   {
