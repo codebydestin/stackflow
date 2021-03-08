@@ -15,7 +15,11 @@ const UserView = ({ user }) => {
       disabled={block}
       onPress={() => setExpand(!expand)}
       style={block ? styles.disable : styles.container}>
-      {following ? <Text style={styles.followLabel}>Following</Text> : null}
+      {following ? (
+        <Text style={styles.followLabel} testID='followingLabel'>
+          Following
+        </Text>
+      ) : null}
 
       <View style={styles.main}>
         <Image
