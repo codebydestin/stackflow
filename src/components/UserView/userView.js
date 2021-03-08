@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { View, Text, Image, TouchableOpacity } from "react-native";
+import PropTypes from "prop-types";
 import ExpandView from "../ExpandView/expandView";
 import { styles } from "./styles";
 
@@ -13,7 +14,7 @@ const UserView = ({ user }) => {
     <TouchableOpacity
       disabled={block}
       onPress={() => setExpand(!expand)}
-      style={styles.container}>
+      style={block ? styles.disable : styles.container}>
       {following ? <Text style={styles.followLabel}>Following</Text> : null}
 
       <View style={styles.main}>
@@ -26,7 +27,7 @@ const UserView = ({ user }) => {
           {`  ${user.display_name}`}
         </Text>
         <Text style={styles.scoreLabel}>
-          <FontAwesome name={"trophy"} /> {` ${user.reputation}`}
+          <FontAwesome name={"trophy"} /> {user.reputation}
         </Text>
       </View>
       <Text style={styles.location}>
@@ -47,6 +48,10 @@ const UserView = ({ user }) => {
       ) : null}
     </TouchableOpacity>
   );
+};
+
+UserView.propTypes = {
+  user: PropTypes.object.isRequired,
 };
 
 export default UserView;

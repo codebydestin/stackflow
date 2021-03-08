@@ -18,7 +18,7 @@ export default () => {
       setUsers(data.items);
     } catch (err) {
       console.log("Found Error: ", err);
-      setErrorMessage("Could not load users!");
+      setErrorMessage("Could not load users..");
     }
   };
 

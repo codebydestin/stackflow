@@ -6,6 +6,12 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     marginTop: 15,
   },
+  errorText: {
+    fontWeight: "bold",
+    textAlign: "center",
+    margin: 20,
+    fontSize: 16,
+  },
 });
 
 export { styles };

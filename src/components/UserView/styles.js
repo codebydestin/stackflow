@@ -8,9 +8,9 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     shadowColor: "#EFEBFA",
     shadowOpacity: 1.0,
-    marginHorizontal: 10,
-    marginBottom: 10,
+    margin: 10,
   },
+  disable: { backgroundColor: "#E2E0EC", borderRadius: 8, margin: 10 },
   main: {
     flex: 1,
     flexDirection: "row",
@@ -21,14 +21,14 @@ const styles = StyleSheet.create({
   },
   icon: { fontSize: 18, marginRight: 20 },
   profileImage: {
-    width: 88,
-    height: 88,
+    width: 76,
+    height: 76,
     borderRadius: 50,
     marginRight: 20,
   },
   displayName: {
     fontWeight: "bold",
-    fontSize: 18,
+    fontSize: 16,
     color: "#211442",
     flex: 1,
     lineHeight: 24,
@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
   },
   followLabel: {
     backgroundColor: "#EFEBFA",
-    margin: 15,
+    marginLeft: 15,
+    marginTop: 15,
     paddingVertical: 5,
     paddingHorizontal: 10,
     alignSelf: "flex-start",
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
   },
   location: {
     marginBottom: 15,
-    marginLeft: 125,
+    marginLeft: 112,
     opacity: 0.6,
     fontSize: 15,
   },

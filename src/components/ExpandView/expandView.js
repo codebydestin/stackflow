@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import { View, Text, TouchableOpacity } from "react-native";
+import PropTypes from "prop-types";
 import { styles } from "./styles";
 
 const ExpandView = ({
@@ -25,13 +26,20 @@ const ExpandView = ({
           style={[styles.bttn, styles.successBttn]}
           onPress={onChangeFollowing}>
           <Text style={styles.bttnText}>
-            <FontAwesome name={"user-plus"} />{" "}
-            {following ? "Unfollow" : "Follow"}
+            <FontAwesome name={"user-plus"} />
+            {following ? " Unfollow" : " Follow"}
           </Text>
         </TouchableOpacity>
       )}
     </View>
   );
+};
+
+ExpandView.propTypes = {
+  following: PropTypes.bool.isRequired,
+  block: PropTypes.bool.isRequired,
+  onChangeBlocked: PropTypes.func.isRequired,
+  onChangeFollowing: PropTypes.func.isRequired,
 };
 
 export default ExpandView;
